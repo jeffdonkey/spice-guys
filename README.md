@@ -12,7 +12,7 @@ Tyson Lannon      919.345.3057
     Tyson: Authentication
     Gang: MongoDB primary
     Jeffrey: Github understanding; Feature Branching
-    Shane: CSS, bootstrap
+    Shane: explore python backend
 
 
     All: MongoDB refresher
