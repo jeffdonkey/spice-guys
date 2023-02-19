@@ -11,8 +11,11 @@ Tyson Lannon      919.345.3057
 02.18.2023:
     Tyson: Authentication
     Gang: MongoDB primary
-    Jeffrey: Github understanding; Feature Branching
+    Jeffrey: Github understanding; Feature Branching.
     Shane: explore python backend
 
 
     All: MongoDB refresher
+
+
+ADDED STUFF EXAMPLE
