@@ -1,4 +1,4 @@
-# spice-guys
+# spice-guys!
 
 #milestone 3 project
 
