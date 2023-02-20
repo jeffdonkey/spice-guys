@@ -1,4 +1,14 @@
 
+# spice-guys
+milestone 3 project
+
+Members:
+Jeffrey Heller    479.422.2529
+Shane Spillman    336.624.8595
+Gang Cao          910.547.2365
+Sassy Spice aka Tyson Lannon      919.345.3057
+=======
+
 # spice-guys!
 
 #milestone 3 project
@@ -24,5 +34,6 @@
 ZZZzz /,`.-'`'    -.  ;-;;,_
      |,4-  ) )-,_. ,\ (  `'-'
     '---''(_/--'  `-'\_)  Felix
+
 
 
