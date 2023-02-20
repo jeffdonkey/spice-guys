@@ -32,7 +32,7 @@
 
 * Get a JSON web token (JWT) for authentication (note that this is covered in the video at https://www.youtube.com/watch?v=YocRq-KesCM):
     - Go to the terminal and type `node` to launch the REPL (Node shell).
-        ![Node ](supportfiles/node-REPL.png?raw=true)
+        ![Node-REPL](supportfiles/node-REPL.png?raw=true)
     - At the `>` prompt type `require('crypto').randomBytes(35).toString('hex')`.
     - Copy the generated string and paste it after `JWT_SECRET=` in the `config.env` file.
     - Type `.exit` to exit the REPL and return to the terminal.
