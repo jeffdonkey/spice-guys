@@ -5,16 +5,17 @@ const sendEmail = require("../utils/sendEmail");
 
 
 // Register user
-exports.register = async (req, res, next) => {
+exports.register = async (req, res, next) => { 
     // res.send("Register route");
-    const { username, email, password } = req.body;
+    const { username, email, password } = req.body; // destructure req.body
 
+    // create user
     try {
         const user = await User.create({
             username,
             email,
             password
-        });
+        }); 
 
         sendToken(user, 201, res); // replaces res.status(201).json({ success: true, token: "randomstring" });
 
