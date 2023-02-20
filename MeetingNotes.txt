@@ -16,3 +16,22 @@ Tyson Lannon      919.345.3057
 
 
     All: MongoDB refresher
+
+========================================
+02.19.2023:
+
+Jeffrey: presented Github documentation on merging.
+Tyson: added framework for authentication.
+Gang: researched MongoDB
+Shane: researched Python
+
+Group: 
+    -reviewed Github merge proceedures
+    -decided to go with JavaScript/Node
+
+To Dos:
+
+    All: mock up's and research
+    Tyson & Gang: MERN video review
+
+
