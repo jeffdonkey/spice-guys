@@ -3,18 +3,18 @@
 ### Installation
 1. Once you've pulled the code into your local machine and are in the main branch, make sure you're in the root folder and run `npm install` to install dependencies.
 2. Open another terminal and `cd` into the `client` folder and run `npm install` to install all the React dependencies.
-3. Go back to the root folder and create a file called `config.env`. You'll need to add the following environmental variables:
+3. Create a file in the root directory called `config.env`. You'll need to add the following environmental variables:
     ```sh
         PORT=5000
         MONGO_URI=mongodb+srv://<username>:<password>@<clustername>.mongodb.net/spiceGuys
 
-        JWT_SECRET=
+        JWT_SECRET=<random-string>
         JWT_EXPIRE=10min
 
         EMAIL_SERVICE=SendGrid
         EMAIL_USERNAME=apikey
-        EMAIL_PASSWORD=
-        EMAIL_FROM=<youremail>
+        EMAIL_PASSWORD=<random-string>
+        EMAIL_FROM=<your-email>
     ```
 4. In order to run the app you'll also need to create a database in MongoDB, generate a JSON web token (JWT), and set up an account on SendGrid. The Prerequisites section below provides further instructions on these.
 
@@ -32,7 +32,7 @@
 
 * Get a JSON web token (JWT) for authentication (note that this is covered in the video at https://www.youtube.com/watch?v=YocRq-KesCM):
     - Go to the terminal and type `node` to launch the REPL (Node shell).
-        ![Node ](supportfiles/MongoDB-Connection-String.png?raw=true)
+        ![Node ](supportfiles/node-REPL.png?raw=true)
     - At the `>` prompt type `require('crypto').randomBytes(35).toString('hex')`.
     - Copy the generated string and paste it after `JWT_SECRET=` in the `config.env` file.
     - Type `.exit` to exit the REPL and return to the terminal.
