@@ -1,0 +1,31 @@
+# Anti-Fascist MIT License
+
+> MIT license with additional text to prohibit use by fascists
+
+### [READ LICENSE TEXT](./LICENSE)
+
+---
+
+We love Open Source, and we  want to give my software away to as many people as
+possible. However, we refuse to let my work benefit those who support fascism.
+
+If you are not a fascist and don't actively support any fascists, you have
+absolutely nothing to worry about. We will not pursue any legal claims against
+you, even if our license text is poorly written.
+
+If that is not enough for your organization, we can personally grant you an
+unmodified MIT license. Please follow these steps:
+
+- Email antifa-license@gmail.com with information about the entity
+  requesting an MIT license.
+- We will provide you with a dollar amount† which said entity must donate to
+  one of the following orgs in order to be granted an MIT license.
+  - [ACLU](https://www.aclu.org/)
+  - [Southern Poverty Law Center](https://www.splcenter.org)
+  - [Human Rights Campaign](http://www.hrc.org)
+  - [Refuse Fascism](https://refusefascism.org/)
+- Email antifa-license@gmail.com with a receipt of your donation.
+
+> † - dollar amounts may range from $0 (for entities that we like) to $500
+> (for smaller businesses and such) to $5,000-$50,000+ (for large/publicly
+> traded corporations).
