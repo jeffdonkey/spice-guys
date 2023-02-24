@@ -6,23 +6,23 @@
     align-items: center;
 }
 
-.login__form {
+.login-form {
     width: 380px;
     padding: 1.5rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     background: #fff;
 }
 
-.login__title {
+.login-title {
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.login__forgotpassword {
+.login-forgotpassword {
     font-size: 0.7rem;
 }
 
-.login__subtext {
+.login-subtext {
     font-size: 0.7rem;
     display: block;
     margin: 0.5rem 0;

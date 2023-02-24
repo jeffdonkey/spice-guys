@@ -18,7 +18,8 @@ const ResetPassword = ({ match }) => {
             }
         };
 
-        if (password !== confirmPassword) {
+        // If the passwords don't match, we want to clear the password fields and set an error message
+        if(password !== confirmPassword) {
             setPassword("");
             setConfirmPassword("");
             setTimeout(() => {
@@ -29,7 +30,7 @@ const ResetPassword = ({ match }) => {
 
         try {
             const { data } = await axios.put(
-                `/api/auth/passwordreset/${match.params.resetToken}`,
+                `/api/auth/passwordreset/${match.params.resetToken}`, // match.params.resetToken is the token from the url
                 { password },
                 config
             );
@@ -47,14 +48,22 @@ const ResetPassword = ({ match }) => {
 
     return (
         <div className="resetpassword">
-            <form onSubmit={ resetPasswordHandler } className="resetpassword__form">
-                <h3 className="resetpassword__title">Forgot Password</h3>
-                { error && <span className="error-message">{ error }</span> }
-                { success && (
+            <form onSubmit={ resetPasswordHandler } className="resetpassword-form">
+                <h3 className="resetpassword-title">Forgot Password</h3>
+
+                {/* If there is an error, display the error message from the catch block */}
+                { error &&
+                    <span className="error-message">
+                         { error }
+                    </span> }
+
+                {/* If password is updated, display the success message (from the try block) and direct to the login */}
+                { success && 
                     <span className="success-message">
-                        { success } <Link to="/login">Login</Link>
-                    </span>
-                ) }
+                        { success }
+                        <Link to="/login">Login</Link>
+                    </span> }
+
                 <div className="form-group">
                     <label htmlFor="password">New Password:</label>
                     <input
@@ -65,8 +74,10 @@ const ResetPassword = ({ match }) => {
                         autoComplete="true"
                         value={ password }
                         onChange={ (e) => setPassword(e.target.value) }
+                        tabIndex={ 1 }
                     />
                 </div>
+
                 <div className="form-group">
                     <label htmlFor="confirmpassword">Confirm New Password:</label>
                     <input
@@ -77,8 +88,10 @@ const ResetPassword = ({ match }) => {
                         autoComplete="true"
                         value={ confirmPassword }
                         onChange={ (e) => setConfirmPassword(e.target.value) }
+                        tabIndex={ 2 }
                     />
                 </div>
+
                 <button type="submit" className="btn btn-primary">Reset Password</button>
             </form>
         </div>

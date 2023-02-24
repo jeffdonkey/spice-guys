@@ -6,19 +6,19 @@
     align-items: center;
 }
 
-.register__form {
+.register-form {
     width: 380px;
     padding: 1.5rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     background: #fff;
 }
 
-.register__title {
+.register-title {
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.register__subtext {
+.register-subtext {
     font-size: 0.7rem;
     display: block;
     margin: 0.5rem 0;
