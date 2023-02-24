@@ -131,7 +131,7 @@ STG Note-Taker is a full-stack MERN app built with the following frameworks/libr
         EMAIL_FROM=<your-email>
     ```
 4. In order to run the app you'll also need to create a database in MongoDB, generate a JSON web token (JWT), and set up an account on SendGrid. The Prerequisites section below provides further instructions on these.
-5. In `package.json` in the `client` folder, make sure the port number in the proxy field matches the `PORT` in your `config.env` file and adjust if needed. The code you pull in locally, `"proxy": "http://127.0.0.1:5001"`, has the port set at  5001.
+5. In `package.json` in the `client` folder, make sure the port number in the proxy field matches the `PORT` in your `config.env` file and adjust if needed. The code you pull in locally, `"proxy": "http://127.0.0.1:5000"`, has the port set at 5000.
 
 
 ### Prerequisites

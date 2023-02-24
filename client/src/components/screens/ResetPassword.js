@@ -30,7 +30,7 @@ const ResetPassword = ({ match }) => {
 
         try {
             const { data } = await axios.put(
-                `/api/auth/passwordreset/${match.params.resetToken}`, // match.params.resetToken is the token from the url
+                `/api/auth/resetpassword/${match.params.resetToken}`, // match.params.resetToken is the token from the url
                 { password },
                 config
             );

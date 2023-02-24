@@ -54,7 +54,7 @@ const ForgotPassword = () => {
                 <div className="form-group">
                     <p className="forgotpassword-subtext">
                         Please enter the email address you registered your account with. We
-                        will send you a link to reset your  password.
+                        will send you a link to reset your password.
                     </p>
                     <label htmlFor="email">Email:</label>
                     <input
