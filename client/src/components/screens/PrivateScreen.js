@@ -8,7 +8,7 @@ const PrivateScreen = ({ history }) => { // Destructure the history prop from th
     const [privateData, setPrivateData] = useState(""); // Used to store the users/admin private data
 
     useEffect(() => {
-        if(!localStorage.getItem("authToken")) { // If the user is not logged in
+        if (!localStorage.getItem("authToken")) { // If the user is not logged in
             history.push("/login"); // Redirect the user to the login page
         }
 
@@ -23,10 +23,10 @@ const PrivateScreen = ({ history }) => { // Destructure the history prop from th
             };
 
             try { // Try to make a get request to the private endpoint
-                const { data } = await axios.get("/api/private", config); 
+                const { data } = await axios.get("/api/private", config);
                 setPrivateData(data.data); // Set the private data to the data property of the response object
 
-            } catch(error) {
+            } catch (error) {
                 localStorage.removeItem("authToken");
                 setError("You are not authorized. Please login");
             }
@@ -43,12 +43,14 @@ const PrivateScreen = ({ history }) => { // Destructure the history prop from th
     return (
         // If there is an error, display the error message
         error ? (
-            <span className="error-message">{ error }</span>
+            <span className="error-message">{error}</span>
 
         ) : ( // If there is no error, display the private data and logout button
             <>
-                <div style={{ background: "green", color: "white" }}>{ privateData }</div>
-                <button onClick={ logoutHandler }>Logout</button>
+                <div style={{ background: "green", color: "white" }}>
+                    {privateData}
+                </div>
+                <button onClick={logoutHandler}>Logout</button>
             </>
         )
     );
