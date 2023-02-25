@@ -1,16 +1,17 @@
-const crypto = require('crypto');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
+const crypto = require("crypto");
 const jwt = require('jsonwebtoken');
 
+// Mongoose schema for a User model
 const UserSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: [true, 'Please provide a username']
+        required: [true, "Please provide a username"]
     },
     email: {
         type: String,
-        required: [true, 'Please provide an email'],
+        required: [true, "Please provide an email"],
         unique: true,
         match: [
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -19,12 +20,12 @@ const UserSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: [true, 'Please provide a password'],
+        required: [true, "Please provide a password"],
         minlength: 6,
-        select: false
+        select: false // Prevents the password from being returned in the response
     },
     resetPasswordToken: String,
-    resetPasswordExpire: Date
+    resetPasswordExpire: Date // Date.now() + 10 minutes
 });
 
 
@@ -59,7 +60,7 @@ UserSchema.methods.getResetPasswordToken = function() {
     return resetToken; // Return unhashed token
 };
 
-
+// User model based on the UserSchema
 const User = mongoose.model('User', UserSchema);
 
 

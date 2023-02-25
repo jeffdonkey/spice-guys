@@ -5,9 +5,9 @@ const sendEmail = require("../utils/sendEmail");
 
 
 // Register user
-exports.register = async (req, res, next) => { 
-    // res.send("Register route");
-    const { username, email, password } = req.body; // destructure req.body
+exports.register = async (req, res, next) => {
+
+    const { username, email, password } = req.body; // Extract username, email, password from JSON body of request
 
     // create user
     try {
@@ -27,7 +27,7 @@ exports.register = async (req, res, next) => {
 
 // Login user
 exports.login = async (req, res, next) => {
-    // res.send("Login route");
+
     const { email, password } = req.body;
 
     // Check that email and password is entered
@@ -58,7 +58,7 @@ exports.login = async (req, res, next) => {
 
 // Forgot password
 exports.forgotPassword = async (req, res, next) => {
-    // res.send("Forgot password route");
+
     const { email } = req.body;
 
     try {
@@ -105,7 +105,7 @@ exports.forgotPassword = async (req, res, next) => {
 
 // Reset user password
 exports.resetPassword = async (req, res, next) => {
-    // res.send("Reset password route");
+   
     const resetPasswordToken = crypto
         .createHash("sha256")
         .update(req.params.resetToken)
