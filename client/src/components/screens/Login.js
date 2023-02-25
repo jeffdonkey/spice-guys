@@ -23,7 +23,7 @@ const Login = ({ history }) => {
 
         // The config object (JSON data) that we will pass to axios in the try block
         const config = {
-            header: {
+            headers: {
                 "Content-Type": "application/json"
             }
         };

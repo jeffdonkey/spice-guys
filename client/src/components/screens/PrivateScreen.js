@@ -16,7 +16,7 @@ const PrivateScreen = ({ history }) => { // Destructure the history prop from th
         const fetchPrivateData = async () => {
 
             const config = {
-                header: {
+                headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${localStorage.getItem("authToken")}` // Set the authorization header
                 }
