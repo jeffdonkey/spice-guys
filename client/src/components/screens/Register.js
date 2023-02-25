@@ -25,7 +25,7 @@ const Register = ({ history }) => { // Destructure the history prop from the pro
 
         // The config object (JSON data) that we will pass to axios in the try block
         const config = {
-            header: { // The header property is used to set the content type of the request
+            headers: { // The header property is used to set the content type of the request
                 "Content-Type": "application/json"
             }
         };

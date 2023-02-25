@@ -9,8 +9,9 @@ const errorHandler = require('./middleware/error');
 connectDB();
 
 // Middleware
-app.use(express.json());
+app.use(express.json()); // Allows us to accept data in the req.body
 app.use(cors());
+
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/private', require('./routes/private'));
 
