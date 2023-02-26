@@ -25,12 +25,6 @@ const UserSchema = new mongoose.Schema({
         minlength: 6,
         select: false // Prevents the password from being returned in the response
     },
-    createdSpices: [{
-        type: Schema.Types.ObjectId, ref: "Spice"
-    }],
-    favouriteSpices: [{
-        type: Schema.Types.ObjectId, ref: "Spice"
-    }],
     resetPasswordToken: String,
     resetPasswordExpire: Date // Date.now() + 10 minutes
 });
