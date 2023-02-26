@@ -7,12 +7,12 @@
         <img src="supportfiles/sglogo.png" alt="logo" />
     </a>
     <h3 align="center">Spice Guys</h3>
-    <p align=center>
-                    |\      _,,,---,,_</br>
+    <!-- <p align=center>
+             |\      _,,,---,,_</br>
         ZZZzz /,`.-'`'    -.  ;-;;,_</br>
             |,4-  ) )-,_. ,\ (  `'-'</br>
-            '---''(_/--'  `-'\_)  Felix
-    </p>
+            '---''(_/--'  `-'\_)   
+    </p> -->
 </div>
 
 
