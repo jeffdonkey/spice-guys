@@ -1,3 +1,7 @@
+02.27 adding "home" view
+
+working code for Home.js 
+
 import image from "./images/spice_background.jpg";
 
 
