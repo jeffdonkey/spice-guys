@@ -12,8 +12,15 @@ connectDB();
 app.use(express.json()); // Allows us to accept data in the req.body
 app.use(cors());
 
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/private', require('./routes/private'));
+// Load Routes
+const spiceRoutes = require('./routes/spiceRoutes');
+const auth = require('./routes/auth');
+const private = require('./routes/private');
+
+// Use Routes
+app.use("/api/spices", spiceRoutes);
+app.use('/api/auth', auth);
+app.use('/api/private', private);
 
 app.use(errorHandler); // Error handler must be last piece of middleware
 
