@@ -1,5 +1,6 @@
 import image from "./images/spice_background.jpg";
 
+
 function Home() {
   return (
     <main>
@@ -14,7 +15,5 @@ function Home() {
   );
 }
 
+
 export default Home;
-
-
-
