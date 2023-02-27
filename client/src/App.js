@@ -11,31 +11,36 @@ import Register from "./components/screens/Register";
 import ForgotPassword from "./components/screens/ForgotPassword";
 import ResetPassword from "./components/screens/ResetPassword";
 import Home from "./Home";
+// import spiceBackground from "./Background.js";
 // import ShowSpice from "./ShowSpice";
 
 
 function App() {
     return ( // The Router component wraps the entire app; is used to provide the app with routing functionality
         <Router>
-            <div className="app">
-
-                {/* The Switch component is used to render the first route that matches the current URL */}
-                <Switch>
-
-                    {/* The Route components render a component when the current URL matches the path prop */}
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/login" component={Login} />
-                    <Route exact path="/register" component={Register} />
-                    <Route exact path="/forgotpassword" component={ForgotPassword} />
-                    <Route exact path="/passwordreset/:resetToken" component={ResetPassword} />
-                    
+            
+                <div className="app">
 
 
-                    {/* The PrivateRoute component renders a component if the user is logged in, else redirects to login page */}
-                    <PrivateRoute exact path="/" component={PrivateScreen} />
+                    {/* The Switch component is used to render the first route that matches the current URL */}
+                    <Switch>
 
-                </Switch>
-            </div>
+                        {/* The Route components render a component when the current URL matches the path prop */}
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/register" component={Register} />
+                        <Route exact path="/forgotpassword" component={ForgotPassword} />
+                        <Route exact path="/passwordreset/:resetToken" component={ResetPassword} />
+
+
+
+                        {/* The PrivateRoute component renders a component if the user is logged in, else redirects to login page */}
+                        <PrivateRoute exact path="/" component={PrivateScreen} />
+
+                    </Switch>
+
+                </div>
+            
         </Router>
     );
 }
