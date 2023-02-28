@@ -7,13 +7,13 @@ const { getAllSpices, getSpiceById } = require('../controllers/spiceControllers'
 // @desc  GET all spices from db
 // @route GET /api/spices
 // @access Public
-router.get('/', getAllSpices);
+router.get('/api/spices', getAllSpices);
 
 
 // @desc  GET a single spice by id from db
 // @route GET /api/spices/:id
 // @access Public
-router.get('/:id', getSpiceById);
+router.get('/api/spices/:id', getSpiceById);
 
 
 module.exports = router;
