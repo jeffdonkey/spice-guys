@@ -1,14 +1,18 @@
-import image from "./images/spice_background.jpg";
-
+import image from "./images/mixed.png";
+import "./landing_page.css";
 
 function Home() {
   return (
     <main>
-      <h1>HOME</h1>
+      <h1>Spice Guys 🌿</h1>
       <div>
-        <img height="500" width="800" src={image} alt="spices" />
+        <img src={image} alt="spices" />
         <div>
-          Photo by <a href="AUTHOR_LINK">Tiard Schulz</a> on <a href="UNSPLASH_LINK">Unsplash</a>
+          <h2>Spice Guys is a spice shop that catalogs a variety of spices and herbs.</h2>
+          <div>
+         <button>hello</button>
+         
+         </div>
         </div>
       </div>
     </main>
