@@ -11,6 +11,7 @@ import Register from "./components/screens/Register";
 import ForgotPassword from "./components/screens/ForgotPassword";
 import ResetPassword from "./components/screens/ResetPassword";
 import Home from "./Home";
+import Navigation from "./Navigate";
 // import spiceBackground from "./Background.js";
 // import ShowSpice from "./ShowSpice";
 
@@ -18,7 +19,7 @@ import Home from "./Home";
 function App() {
     return ( // The Router component wraps the entire app; is used to provide the app with routing functionality
         <Router>
-            
+            <Navigation />
                 <div className="app">
 
 
