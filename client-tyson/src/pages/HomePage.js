@@ -1,10 +1,8 @@
 import './HomePage.css';
-import Navbar from "../components/Navbar";
 
 const HomePage = () => {
   return (
-    <div>
-      <Navbar />
+    <div className="home">
       <h1>Welcome to my Home Page!</h1>
     </div>
   );

@@ -6,20 +6,22 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import ResetPassword from "./pages/auth/ResetPassword";
+import Navbar from "./components/Navbar";
+import PrivateRoute from "./routing/PrivateRoute";
+import PrivateScreen from "./pages/PrivateScreen";
 
-// Pages
-import HomePage from "./pages/HomePage";
 
 const App = () => {
     return (
         <Router>
         <div className="app">
+            <Navbar />
             <Switch>
-                <Route exact path="/" component={HomePage} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/forgotpassword" component={ForgotPassword} />
                 <Route exact path="/passwordreset/:resetToken" component={ResetPassword} />
+                <PrivateRoute exact path="/" component={ PrivateScreen } />
             </Switch>
         </div>
         </Router>
