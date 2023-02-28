@@ -13,29 +13,32 @@ const {
 // @desc  GET all spices from db
 // @route GET /api/spices
 // @access Public
-router.get('/api/spices', getAllSpices);
+router.get('/', getAllSpices);
 
 
 // @desc  GET a single spice by id from db
 // @route GET /api/spices/:id
 // @access Public
-router.get('/api/spices/:id', getSpiceById);
+router.get('/:id', getSpiceById);
 
 
 // Create a new spice
 // @route POST /api/spices
 // @access Private/Admin
-router.post('/', protect, admin, createSpice)
+// router.post('/', protect, admin, createSpice)
+router.post('/', createSpice)
 
 // Update a spice
 // @route PUT /api/spices/:id
 // @access Private/Admin
-router.put('/:id', protect, admin, updateSpice)
+// router.put('/:id', protect, admin, updateSpice)
+router.put('/:id', updateSpice)
 
 // Delete a spice
 // @route DELETE /api/spices/:id
 // @access Private/Admin
-router.delete('/:id', protect, admin, deleteSpice)
+// router.delete('/:id', protect, admin, deleteSpice)
+router.delete('/:id', deleteSpice)
 
 
 module.exports = router;

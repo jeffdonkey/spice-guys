@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
-const SpiceSchema = new mongoose.Schema({
+const Schema = mongoose.Schema;
+
+const SpiceSchema = new Schema({
     name: {
         type: String,
         required: true

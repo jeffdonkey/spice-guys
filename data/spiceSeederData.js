@@ -31,6 +31,14 @@ const spiceSeederData = [
     description:
       "Rosemary is a woody, perennial herb with fragrant, evergreen, needle-like leaves and white, pink, purple, or blue flowers, native to the Mediterranean region.",
   },
+  {
+    name: "Saffron",
+    tagline: "What's cooking?",
+    image:
+      "https://images.unsplash.com/photo-1558981402-6d6a7b7b7b0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    description:
+      "Saffron is a spice derived from the flower of Crocus sativus, commonly known as the saffron crocus.",
+  },
 ];
 
 module.exports = spiceSeederData;

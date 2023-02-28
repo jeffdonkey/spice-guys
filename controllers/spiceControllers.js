@@ -2,7 +2,6 @@ const Spice = require('../models/spice');
 
 // GET all spices from db
 const getAllSpices = async (req, res) => {
-
     try {
         const spices = await Spice.find({});
         res.json(spices);
