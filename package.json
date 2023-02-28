@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
+    "client": "npm start --prefix client-tyson",
     "dev": "concurrently \"npm start\" \"npm run client\"",
     "data:import": "node seederScript.js"
   },
