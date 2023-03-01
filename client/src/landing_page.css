@@ -1,6 +1,6 @@
 /* this is the .css file that styles the Home.js folder */
 
-body {
+main {
     background: #000;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
@@ -9,6 +9,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 
