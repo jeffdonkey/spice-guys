@@ -19,7 +19,7 @@ router.get('/', getAllSpices);
 // @desc  GET a single spice by id from db
 // @route GET /api/spices/:id
 // @access Public
-router.get(':id', getSpiceById);
+router.get('/:id', getSpiceById);
 
 
 // Create a new spice
