@@ -14,7 +14,7 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/landingpage" component={LandingPage} />
-        <Route path="/spicedisplay" component={SpiceDisplay} />
+        <Route path="/spices" component={SpiceDisplay} />
       </Switch>
     </Router>
   );
