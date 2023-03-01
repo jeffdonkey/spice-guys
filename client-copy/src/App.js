@@ -5,6 +5,7 @@ import Login from "./components/screens/Login";
 import LandingPage from "./components/screens/LandingPage";
 import AuthRoute from "./components/routing/AuthRoute";
 import SpiceDisplay from "./components/screens/SpiceDisplay";
+import CreateSpicePage from "./components/screens/CreateSpicePage";
 
 function App() {
   return (
@@ -13,12 +14,11 @@ function App() {
         <AuthRoute exact path="/" component={UserHomePage} />
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
-        <Route path="/landingpage" component={LandingPage} />
+        <Route path="/" component={LandingPage} />
         <Route path="/spices" component={SpiceDisplay} />
+        <Route path="spices/create" component={CreateSpicePage} />
         {/*
-        <Route path="/spices/:id" component={SpiceDetails} />
         <Route path="/spices/:id/edit" component={EditSpice} />
-        <Route path="/spices/new" component={CreateSpice} />
         <Route path="/spices/:id/delete" component={DeleteSpice} />
         */}
       </Switch>

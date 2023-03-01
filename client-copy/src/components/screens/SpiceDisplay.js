@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-const SpiceDetails = () => {
+const SpiceDisplay = () => {
   const [spices, setSpices] = useState([]);
   const [selectedSpice, setSelectedSpice] = useState(null);
 
@@ -22,7 +23,7 @@ const SpiceDetails = () => {
   return (
     <div className="spice-container">
       <h2>List of spices</h2>
-      <button>Add New Spice (Link or Button)</button>{" "}
+      <Link to="/spices/create">Add New Spice</Link>{" "}
       {/* will link to CreatSpicePage.js */}
       <div className="spices-to-cards">
         {/* Render individual spice cards */}
@@ -33,7 +34,6 @@ const SpiceDetails = () => {
           </div>
         ))}
       </div>
-
       {/* Render selected spice information in a popup? */}
       {selectedSpice && (
         <div>
@@ -47,4 +47,4 @@ const SpiceDetails = () => {
   );
 };
 
-export default SpiceDetails;
+export default SpiceDisplay;
