@@ -49,7 +49,7 @@ const UserHomePage = ({ history }) => {
     ) : (
       // If there is no error, display the private data and logout button
       <>
-        <button onClick={logoutHandler}>Logout</button>
+        <button onClick={logoutHandler}>Logout Button</button>
         <SpiceDisplay />
       </>
     )

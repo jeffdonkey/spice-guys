@@ -10,8 +10,8 @@
 //                 <Card.Img src="https://place-puppy.com/200x200" alt="Card image" />
 //                 <Card.ImgOverlay>
 //                     <Card.Title>InstaClone!  Cloned Food!  Delivered!</Card.Title>
-//                     <Card.Text>
-//                         Dogs are not food just cute.
+//                     <Card.Text>od just cute.
+//                         Dogs are not fo
 //                     </Card.Text>
 //                 </Card.ImgOverlay>
 //             </Card>
@@ -21,3 +21,5 @@
 // }
 
 // export default ShowSpice
+
+

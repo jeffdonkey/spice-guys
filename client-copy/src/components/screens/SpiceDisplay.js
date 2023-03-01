@@ -18,7 +18,10 @@ const SpiceDisplay = () => {
 
   return (
     <div className="spice-container">
-      <div className="spices">
+      <h2>List of spices</h2>
+      <button>Add New Spice (Link or Button)</button>{" "} {/* will link to CreatSpicePage.js */}
+      <div className="spices-to-cards">
+        The individual spice cards will render below
         {spices && spices.map((spice) => <p key={spice._id}>{spice.name}</p>)}
       </div>
     </div>
