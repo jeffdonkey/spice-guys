@@ -10,8 +10,8 @@ import Login from "./components/screens/Login";
 import Register from "./components/screens/Register";
 import ForgotPassword from "./components/screens/ForgotPassword";
 import ResetPassword from "./components/screens/ResetPassword";
-import Home from "./Home";
-import Navigation from "./Navigate";
+import Home from "./Home2";
+// import Navigation from "./Navigate";
 import ShowSpice from "./ShowSpice";
 
 // import ShowSpice from "./ShowSpice";
@@ -22,7 +22,7 @@ function App() {
     return ( // The Router component wraps the entire app; is used to provide the app with routing functionality
         <Router>
             
-            <Navigation />
+            {/* <Navigation /> */}
             <div className="app">
 
 
