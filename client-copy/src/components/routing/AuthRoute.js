@@ -1,6 +1,6 @@
 import { Redirect, Route } from "react-router-dom";
 
-const PrivateRoute = ({ component: Component, ...rest }) => { // component: Component (object) is used to rename the component prop to Component
+const AuthRoute = ({ component: Component, ...rest }) => { // component: Component (object) is used to rename the component prop to Component
 
     // If the user is logged in, render the component, else redirect to login page
     return (
@@ -20,4 +20,4 @@ const PrivateRoute = ({ component: Component, ...rest }) => { // component: Comp
     );
 };
 
-export default PrivateRoute;
+export default AuthRoute;

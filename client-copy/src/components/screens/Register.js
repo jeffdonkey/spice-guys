@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"; // Import the useState hook for creating state variables and useEffect hook for running side effects
 import axios from "axios"; // Import axios for making API requests
 import { Link } from "react-router-dom"; // Import the Link component for creating links
-import "./Register.css";
+import "./AuthScreens.css";
 
 const Register = ({ history }) => { // Destructure the history prop from the props object; used for redirecting the user
 
