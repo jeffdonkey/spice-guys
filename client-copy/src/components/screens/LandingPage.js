@@ -1,5 +1,6 @@
 import image from "./images/mixed.png";
 import "./LandingPage.css";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
@@ -12,7 +13,9 @@ function LandingPage() {
             Spice Guys is a spice shop that catalogs a variety of spices and
             herbs.
             <p>
-              <a href="./Login">Login</a> or <a href="./Register">Register</a>{" "}
+              <Link to="/login">Login</Link>
+              or
+              <Link to="/register">Register</Link>
               to continue.
             </p>
           </h2>

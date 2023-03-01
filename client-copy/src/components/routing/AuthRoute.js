@@ -13,7 +13,7 @@ const AuthRoute = ({ component: Component, ...rest }) => { // component: Compone
                 localStorage.getItem("authToken") ? ( 
                     <Component { ...props } /> // The spread operator passes all the props to the component
                 ) : (
-                    <Redirect to="/login" /> // Redirect to login page
+                    <Redirect to="/landingpage" /> // Redirect to login page
                 )
             }
         />

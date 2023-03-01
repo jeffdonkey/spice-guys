@@ -1,35 +1,23 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-// Routing
-import AuthRoute from "./components/routing/AuthRoute";
-
-// Screens
 import UserHomePage from "./components/screens/UserHomePage";
-import Login from "./components/screens/Login";
 import Register from "./components/screens/Register";
-import ForgotPassword from "./components/screens/ForgotPassword";
-import ResetPassword from "./components/screens/ResetPassword";
+import Login from "./components/screens/Login";
 import LandingPage from "./components/screens/LandingPage";
+import AuthRoute from "./components/routing/AuthRoute";
+import SpiceDisplay from "./components/screens/SpiceDisplay";
 
-const App = () => {
-    return (
-      <Router>
-        <div className="app">
-          <Switch>
-            <LandingPage />
-            <AuthRoute exact path="/" component={UserHomePage} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/forgotpassword" component={ForgotPassword} />
-            <Route
-              exact
-              path="/passwordreset/:resetToken"
-              component={ResetPassword}
-            />
-          </Switch>
-        </div>
-      </Router>
-    );
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <AuthRoute exact path="/" component={UserHomePage} />
+        <Route path="/register" component={Register} />
+        <Route path="/login" component={Login} />
+        <Route path="/landingpage" component={LandingPage} />
+        <Route path="/spicedisplay" component={SpiceDisplay} />
+      </Switch>
+    </Router>
+  );
 };
 
 export default App;

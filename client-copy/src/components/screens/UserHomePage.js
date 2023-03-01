@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import SpiceDisplay from "./SpiceDisplay";
 
 const UserHomePage = ({ history }) => {
   // Destructure the history prop from the props object; used for redirecting the user
@@ -48,8 +49,8 @@ const UserHomePage = ({ history }) => {
     ) : (
       // If there is no error, display the private data and logout button
       <>
-        <div style={{ background: "green", color: "white" }}>{privateData}</div>
         <button onClick={logoutHandler}>Logout</button>
+        <SpiceDisplay />
       </>
     )
   );
