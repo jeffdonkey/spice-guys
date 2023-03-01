@@ -15,6 +15,12 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/landingpage" component={LandingPage} />
         <Route path="/spices" component={SpiceDisplay} />
+        {/*
+        <Route path="/spices/:id" component={SpiceDetails} />
+        <Route path="/spices/:id/edit" component={EditSpice} />
+        <Route path="/spices/new" component={CreateSpice} />
+        <Route path="/spices/:id/delete" component={DeleteSpice} />
+        */}
       </Switch>
     </Router>
   );
