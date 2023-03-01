@@ -18,7 +18,7 @@ const ResetPassword = ({ match }) => {
             }
         };
 
-        // If the passwords don't match, we want to clear the password fields and set an error message
+        // If the passwords don't match, we want to clear the password fields & set an error message
         if(password !== confirmPassword) {
             setPassword("");
             setConfirmPassword("");
