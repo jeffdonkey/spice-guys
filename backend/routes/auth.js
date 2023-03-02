@@ -20,10 +20,10 @@ const User = require("../models/User");
 // const { json } = require('express')
 // require("dotenv").config();
 
-// Route 1: Create a user using POST '/api/auth/createuser'
-router.post("/createuser",
+// Route 1: Create a user using POST '/api/auth/register'
+router.post("/register",
   [
-    body("name", "Enter a valid name").isLength({ min: 3 }),
+    body("username", "Enter a valid username").isLength({ min: 3 }),
     body("email", "Enter a valid email address").isEmail(),
     body("password", "Password must be at least 8 characters long").isLength({ min: 8 }),
   ],
@@ -55,7 +55,7 @@ router.post("/createuser",
 
       // Create user which returns complete user object as a json file and saves to NongoDB:
       user = await User.create({
-        name: req.body.name,
+        username: req.body.name,
         email: req.body.email,
         password: secPass,
       });

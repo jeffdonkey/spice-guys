@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const SpiceSchema = new Schema({
+const SpicesSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -18,10 +18,14 @@ const SpiceSchema = new Schema({
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
+  date: {
+    type: String,
+    default: Date.now(),
+  }
 });
 
-const Spice = mongoose.model("spice", SpiceSchema);
+const Spices = mongoose.model("spices", SpicesSchema);
 
-module.exports = Spice;
+module.exports = Spices;
