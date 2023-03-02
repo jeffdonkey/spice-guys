@@ -95,6 +95,70 @@ const spiceSeederData = [
     description:
       "The pucker! The crunch! Ever since I can remember, I’ve been an avid pickle eater. Whether it’s a spicy garlic kosher dill, tangy French-style baby gherkins, or sweet bread and butters, pickles have topped just about every sandwich I’ve eaten and been a staple snack eaten straight out of the jar for as long as I can remember. It still drives my mom nuts whenever I fish pickles out of the jar with my fingers instead of a fork.",
   },
+  {
+    name: "Amchur",
+    tagline: "What's cooking?",
+    image:
+      "https://www.netmeds.com/images/cms/wysiwyg/blog/2022/05/1652347321_mango-powder_898x450.jpg",
+    description:
+      "Amchur is the powdered form of unripe, dried green mangoes. It’s used in Indian cooking to add tangy, citrusy flavor to dishes without any of the moisture that would come from adding ripe fruit. Because it contains fruit enzymes, amchoor can be used in marinades to tenderize meat and poultry.",
+  },
+  {
+    name: "Fenugreek",
+    tagline: "What's cooking?",
+    image:
+      "https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRxpLmn0QxGN2VJ2BGWHGnMskIjsARtENKtFDSOCmevg6jVqbUAq2xjWCzxYcHJr-qe4dA2QrXbIMGURLU",
+    description:
+      "Fenugreek is another secret ingredient of Indian cooking that complements the flavors of other spices. It is both sweet and bitter, which gives it the ability to balance out sour, spicy notes in curries and sauces. Small, hard fenugreek seeds can be toasted to remove bitterness before being ground.",
+  },
+  {
+    name: "Dukkah",
+    tagline: "What's cooking?",
+    image:
+      "https://thishealthytable.com/wp-content/uploads/2023/01/dukkah-recipe-735x735.jpg",
+    description:
+      "Dukkah is a coarse blend of roasted nuts and seeds seasoned with pepper, salt, black sesame seeds, cumin, and coriander. Considered more of a condiment than a spice, dukkah can be sprinkled on dishes or used as a coating on meat and fish. One of the most common ways to enjoy dukkah is by dipping pita bread into olive oil, then coating the bread with the crunchy seed blend.",
+  },
+  {
+    name: "Harissa",
+    tagline: "What's cooking?",
+    image:
+      "https://www.nonguiltypleasures.com/wp-content/uploads/2021/09/rose-harissa-paste-1.jpg",
+    description:
+      "Harissa is a North African chili paste made from roasted peppers, olive oil, and spices. It’s a staple condiment in Tunisia, Algeria, and Morocco and has become more prevalent in the US as global dishes have grown in popularity. The level of heat in harissa varies depending on the recipe. Some variations of the chili paste contain rose petals or rosewater to balance out the spiciness.",
+  },
+  {
+    name: "Sichuan Pepper",
+    tagline: "What's cooking?",
+    image:
+      "https://omnivorescookbook.com/wp-content/uploads/2016/02/1602_Chinese-Ingredients_025.jpg",
+    description:
+      "Neither a pepper nor a chile, the Sichuan peppercorn comes from the seed husks of the prickly ash tree. The flavor of Sichuan peppercorns is entirely unique in the spice world and creates a numbing, tingling sensation in the mouth. This numbing quality makes the spice a prized ingredient in Chinese cooking. It’s also an important component of Chinese 5 spice powder.",
+  },
+  {
+    name: "Star Anise",
+    tagline: "What's cooking?",
+    image:
+      "https://cdn.britannica.com/97/120997-004-DF1E3D07/Fruit-star-anise.jpg",
+    description:
+      "Star anise is the highly recognizable star-shaped seed pod that gives Vietnamese pho its distinctive flavor. The whole pod is added to soups and stews to infuse them with flavor and then it's removed before serving. Freshly ground star anise is also used in the spice blend, Chinese 5 spice. The licorice-like flavor of star anise is compared to fennel and anise seed.",
+  },
+  {
+    name: "Togarashi",
+    tagline: "What's cooking?",
+    image:
+      "https://www.linsfood.com/wp-content/uploads/2017/01/Shichimi-Togarashi-1-500x467.jpg",
+    description:
+      "Togarashi is a flavorful spice mixture that contains red chili pepper, orange peel, sesame seeds, poppy seeds, seaweed flakes, sichuan peppercorns, and ginger. Popular in Japan, togarashi is used as a table seasoning and sprinkled on ramen, udon noodles, steamed rice, and grilled meats.",
+  },
+  {
+    name: "Makrut Lime Powder",
+    tagline: "What's cooking?",
+    image:
+    "https://woodlandfoods.com/img/WF_Images/H499-ground-kaffir-lime-leaves-powder-dried-herb-main.jpg",
+    description:
+      "The makrut lime is a small, wrinkled lime with bumpy skin that grows in Southeast Asia. Much more potent and bitter than a regular lime, makrut limes are prized for their leaves and rind rather than their juice. The glossy, dark green leaves are responsible for the bright, citrus flavor in many Thai dishes. Best used fresh, makrut lime leaves can also be dried and ground.",
+  },
 ];
 
 module.exports = spiceSeederData;
