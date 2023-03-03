@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import UserHomePage from "./components/screens/UserHomePage";
 import Register from "./components/screens/Register";
 import Login from "./components/screens/Login";
@@ -9,7 +9,7 @@ import CreateSpicePage from "./components/screens/CreateSpicePage";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Switch>
         <AuthRoute exact path="/" component={UserHomePage} />
         <Route path="/register" component={Register} />
@@ -22,7 +22,7 @@ function App() {
         <Route path="/spices/:id/delete" component={DeleteSpice} />
         */}
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
 }
 
