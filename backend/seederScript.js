@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 const spiceSeederData = require('./data/spiceSeederData');
 const connectDB = require("./db");
 const Spices = require('./models/Spices');
