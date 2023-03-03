@@ -20,14 +20,13 @@ router.post(
   "/addspice",
   async (req, res) => {
     try {
-      const { name, tagline, image, description } = req.body;
+      const { name, image, description } = req.body;
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
       }
       const spice = new Spices({
         name,
-        tagline,
         image,
         description
       });
@@ -41,15 +40,12 @@ router.post(
 );
 
 // Edit an existing spice at /api/spices/updatespice/:id
-router.put("/updatespice/:id",  async (req, res) => {
-  const { name, tagline, image, description } = req.body;
+router.put("/updatespice/:id", async (req, res) => {
+  const { name, image, description } = req.body;
   try {
     const newSpice = {};
     if (name) {
       newSpice.name = name;
-    }
-    if (tagline) {
-      newSpice.tagline = tagline;
     }
     if (image) {
       newSpice.image = image;
