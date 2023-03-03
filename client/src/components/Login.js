@@ -25,8 +25,9 @@ const Login = (props) => {
         const json = await response.json();
         console.log(json);
         if (json.success) {
-            localStorage.setItem('authToken', json.authToken);
-            navigate('/');
+            localStorage.setItem('authToken', json.authToken);            
+            // navigate('/showspice');
+            navigate('/home');
             props.showAlert('Logged in successfully!', 'success');
         } else {
             props.showAlert('Invalid credentials!', 'danger');

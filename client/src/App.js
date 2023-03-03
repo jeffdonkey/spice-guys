@@ -4,12 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Navbar";
 import About from "./components/About";
 import Home from "./components/Home";
-import NoteState from "./context/NoteState";
+import SpiceState from "./context/SpiceState";
 import Alert from "./components/Alert";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import "bootstrap/dist/css/bootstrap.min.css";
-import LandingPage from "./components/LandingPage"
+import LandingPage from "./components/LandingPage";
+import ShowSpice from "./components/ShowSpice";
 
 function App() {
   // Set initial state for alert as null
@@ -28,8 +29,8 @@ function App() {
 
   return (
     <>
-      {/* Use NoteState so any child will use context */}
-      <NoteState>
+      {/* Use SpiceState so any child will use context */}
+      <SpiceState>
         <Router>
           <Header />
           <Alert alert={alert} />
@@ -38,6 +39,7 @@ function App() {
               <Route path="/" element={<LandingPage />} />
               <Route exact path="/home" element={<Home showAlert={showAlert} />} />
               <Route exact path="/about" element={<About />} />
+              <Route exact path="/showspice" element={<ShowSpice />} />
               <Route
                 exact
                 path="/login"
@@ -51,7 +53,7 @@ function App() {
             </Routes>
           </div>
         </Router>
-      </NoteState>
+      </SpiceState>
     </>
   );
 }
