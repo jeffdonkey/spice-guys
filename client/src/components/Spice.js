@@ -1,21 +1,21 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import NoteItem from './NoteItem';
-import NoteContext from '../context/SpiceContext';
+import SpiceItem from './SpiceItem';
+import SpiceContext from '../context/SpiceContext';
 import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Container';
 
 
-const Notes = (props) => {
+const Spices = (props) => {
     let navigate = useNavigate();
 
-    const context = useContext(NoteContext);
-    const { notes, getNotes, editNote } = context;
+    const context = useContext(SpiceContext);
+    const { spices, getSpices, editSpice } = context;
 
     useEffect(() => {
         if(localStorage.getItem('authToken')) {
-            getNotes();
+            getSpices();
         }
         else {
             navigate('/login');
@@ -25,34 +25,34 @@ const Notes = (props) => {
     const ref = useRef(null);
     const refClose = useRef(null);
 
-    const [note, setNote] = useState({
+    const [spice, setSpice] = useState({
         eid: '',
         etitle: '',
         edescription: '',
         etag: ''
     });
 
-    const updateNote = (currentNote) => {
+    const updateSpice = (currentSpice) => {
         ref.current.click();
-        setNote({
-            eid: currentNote._id,
-            etitle: currentNote.title,
-            edescription: currentNote.description,
-            etag: currentNote.tag
+        setSpice({
+            eid: currentSpice._id,
+            etitle: currentSpice.title,
+            edescription: currentSpice.description,
+            etag: currentSpice.tag
         });
     };
 
     const onChange = (e) => {
-        setNote({
-            ...note,
+        setSpice({
+            ...spice,
             [e.target.name]: e.target.value
         });
     };
 
     const handleClick = (e) => {
         refClose.current.click();
-        editNote(note.eid, note.etitle, note.edescription, note.etag);
-        props.showAlert('Note updated successfully!', 'success');
+        editSpice(spice.eid, spice.etitle, spice.edescription, spice.etag);
+        props.showAlert('Spice updated successfully!', 'success');
     };
 
     return (
@@ -65,37 +65,37 @@ const Notes = (props) => {
                     <div className='modal-dialog'>
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">Edit Note</h5>
+                                <h5 className="modal-title" id="exampleModalLabel">Edit Spice</h5>
                                 <Button className="btn-close" data-bs-dismiss="modal" aria-label="Close"></Button>
                             </div>
                             <div className="modal-body">
                                 <Form>
                                     <Form.Group className="mb-3">
                                         <Form.Label>Edit Title</Form.Label>
-                                        <Form.Control type="text" minLength={ 3 } required  id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={ onChange } />
+                                        <Form.Control type="text" minLength={ 3 } required  id="etitle" name="etitle" value={spice.etitle} aria-describedby="emailHelp" onChange={ onChange } />
                                     </Form.Group>
                                     <Form.Group className="mb-3">
                                         <Form.Label>Edit Content</Form.Label>
-                                        <Form.Control type="text" as='textarea' style={{ height: '100px' }} id="edescription" name="edescription" value={ note.edescription } onChange={ onChange } />
+                                        <Form.Control type="text" as='textarea' style={{ height: '100px' }} id="edescription" name="edescription" value={ spice.edescription } onChange={ onChange } />
                                     </Form.Group>
                                     <Form.Group className="mb-3">
                                         <Form.Label>Edit Tags/Keywords</Form.Label>
-                                        <Form.Control type="text" id="etag" name="etag" value={ note.etag } onChange={ onChange } />
+                                        <Form.Control type="text" id="etag" name="etag" value={ spice.etag } onChange={ onChange } />
                                     </Form.Group>
                                 </Form>
                             </div>
                             <div className="modal-footer">
                                 <Button ref={ refClose } variant="secondary" data-bs-dismiss="modal">Close</Button>
-                                <Button variant='primary' disabled={ note.etitle.length < 3 } onClick={ handleClick }>Update Note</Button>
+                                <Button variant='primary' disabled={ spice.etitle.length < 3 } onClick={ handleClick }>Update Spice</Button>
                             </div>
                         </div>
                     </div>
                 </Modal>
                 <div className='row my-3'>
-                        <h2>Your Notes</h2>
-                        { notes.length === 0 && 'No Notes to display' }
-                        { notes.map((note) => {
-                            return <NoteItem key={ note._id } updateNote={ updateNote } showAlert={ props.showAlert } note={ note } />
+                        <h2>Your Spices</h2>
+                        { spices.length === 0 && 'No Spices to display' }
+                        { spices.map((spice) => {
+                            return <SpiceItem key={ spice._id } updateSpice={ updateSpice } showAlert={ props.showAlert } spice={ spice } />
                         }) }
                 </div>
             </div>
@@ -103,4 +103,4 @@ const Notes = (props) => {
     )
 };
 
-export default Notes;
+export default Spices;

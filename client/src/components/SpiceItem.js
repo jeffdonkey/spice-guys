@@ -1,32 +1,32 @@
 import React, { useContext } from 'react';
-import NoteContext from '../context/SpiceContext';
+import SpiceContext from '../context/SpiceContext';
 import Accordion from "react-bootstrap/Accordion";
 
 
-const NoteItem = (props) => {
-    const context = useContext(NoteContext);
-    const { deleteNote } = context;
-    const { note, updateNote } = props;
+const SpiceItem = (props) => {
+    const context = useContext(SpiceContext);
+    const { deleteSpice } = context;
+    const { spice, updateSpice } = props;
 
      
     return (
         <Accordion defaultActiveKey="1">
             <Accordion.Item eventKey="1">
-                <Accordion.Header style={{ fontWeight: "bold" }}>{ note.title }</Accordion.Header>
+                <Accordion.Header style={{ fontWeight: "bold" }}>{ spice.title }</Accordion.Header>
                 <Accordion.Body>
-                    <p>{ note.description }</p>
-                    {/* Clicking on the trashcan icon will call the delete function and pass the note id 
-                    of that particular note. We are getting the note id as each and every element(object)
+                    <p>{ spice.description }</p>
+                    {/* Clicking on the trashcan icon will call the delete function and pass the spice id 
+                    of that particular spice. We are getting the spice id as each and every element(object)
                     represents a card which has its id,t,d,tag*/}
                     <i className="fas fa-trash mx-2"
                         onClick={ () => {
-                            deleteNote(note._id);
+                            deleteSpice(spice._id);
                         props.showAlert("Deleted succesfully", "success");
                         } }
                     ></i>
                     <i className="fas fa-edit mx-2"
                         onClick={ () => {
-                            updateNote(note);
+                            updateSpice(spice);
                         } }
                     ></i>
                 </Accordion.Body>
@@ -35,4 +35,4 @@ const NoteItem = (props) => {
     );
 }
 
-export default NoteItem
+export default SpiceItem
