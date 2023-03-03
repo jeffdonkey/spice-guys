@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <h5>STG Note-Taker was developed by GangCao, Samuel Smith and Tyson Lannon in 2022 as project for a Software/Web Delvelopment Bootcamp!</h5>
+        <h5>SpiceGuys was developed by GangCao, Jeff Heller, Shane Spillman and Tyson Lannon in 2023 for NORS Boot Camp</h5>
     )
 }
 

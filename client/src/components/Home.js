@@ -1,5 +1,5 @@
 import React from 'react';
-import AddNote from './AddNote';
+import AddNote from './AddSpice';
 import Notes from './Spice';
 
 const Home = (props) => {

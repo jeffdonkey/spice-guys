@@ -26,10 +26,10 @@ const SpiceState = (props) => {
 
 
   // API call to add a spice using POST
-  /* addSpice function will take title, desc & tag in request body
+  /* addSpice function will take name, desc & image in request body
   user.id will be inserted by backend through authToken
   spice.id will be generated automatically by mongo */
-  const addSpice = async (title, description, tag) => {
+  const addSpice = async (name, description, image) => {
     const response = await fetch(
       `${process.env.REACT_APP_SERVER_URL}api/spices/addspice`,
       {
@@ -38,7 +38,7 @@ const SpiceState = (props) => {
           "Content-Type": "application/json",
           "auth-token": localStorage.getItem("authToken"),
         },
-        body: JSON.stringify({ title, description, tag }),
+        body: JSON.stringify({ name, description, image }),
       }
     );
     const spice = await response.json();
@@ -67,7 +67,7 @@ const SpiceState = (props) => {
   };
 
   // Edit a spice:
-  const editSpice = async (id, title, description, tag) => {
+  const editSpice = async (id, name, description, image) => {
     await fetch(
       `${process.env.REACT_APP_SERVER_URL}api/spices/updatespice/${id}`,
       {
@@ -76,7 +76,7 @@ const SpiceState = (props) => {
           "Content-Type": "application/json",
           "auth-token": localStorage.getItem("authToken"),
         },
-        body: JSON.stringify({ title, description, tag }),
+        body: JSON.stringify({ name, description, image }),
       }
     );
     // const json = await response.json()
@@ -85,9 +85,9 @@ const SpiceState = (props) => {
     for (let index = 0; index < newSpices.length; index++) {
       const element = newSpices[index];
       if (element._id === id) {
-        newSpices[index].title = title;
+        newSpices[index].name = name;
         newSpices[index].description = description;
-        newSpices[index].tag = tag;
+        newSpices[index].image = image;
         break;
       }
     }

@@ -27,18 +27,18 @@ const Spices = (props) => {
 
     const [spice, setSpice] = useState({
         eid: '',
-        etitle: '',
+        ename: '',
         edescription: '',
-        etag: ''
+        eimage: ''
     });
 
     const updateSpice = (currentSpice) => {
         ref.current.click();
         setSpice({
             eid: currentSpice._id,
-            etitle: currentSpice.title,
+            ename: currentSpice.name,
             edescription: currentSpice.description,
-            etag: currentSpice.tag
+            eimage: currentSpice.image
         });
     };
 
@@ -51,7 +51,7 @@ const Spices = (props) => {
 
     const handleClick = (e) => {
         refClose.current.click();
-        editSpice(spice.eid, spice.etitle, spice.edescription, spice.etag);
+        editSpice(spice.eid, spice.ename, spice.edescription, spice.eimage);
         props.showAlert('Spice updated successfully!', 'success');
     };
 
@@ -71,22 +71,22 @@ const Spices = (props) => {
                             <div className="modal-body">
                                 <Form>
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Edit Title</Form.Label>
-                                        <Form.Control type="text" minLength={ 3 } required  id="etitle" name="etitle" value={spice.etitle} aria-describedby="emailHelp" onChange={ onChange } />
+                                        <Form.Label>Edit Spice Name</Form.Label>
+                                        <Form.Control type="text" minLength={ 3 } required  id="ename" name="ename" value={spice.ename} aria-describedby="emailHelp" onChange={ onChange } />
                                     </Form.Group>
                                     <Form.Group className="mb-3">
                                         <Form.Label>Edit Content</Form.Label>
                                         <Form.Control type="text" as='textarea' style={{ height: '100px' }} id="edescription" name="edescription" value={ spice.edescription } onChange={ onChange } />
                                     </Form.Group>
                                     <Form.Group className="mb-3">
-                                        <Form.Label>Edit Tags/Keywords</Form.Label>
-                                        <Form.Control type="text" id="etag" name="etag" value={ spice.etag } onChange={ onChange } />
+                                        <Form.Label>Edit Image URL</Form.Label>
+                                        <Form.Control type="text" id="eimage" name="eimage" value={ spice.eimage } onChange={ onChange } />
                                     </Form.Group>
                                 </Form>
                             </div>
                             <div className="modal-footer">
                                 <Button ref={ refClose } variant="secondary" data-bs-dismiss="modal">Close</Button>
-                                <Button variant='primary' disabled={ spice.etitle.length < 3 } onClick={ handleClick }>Update Spice</Button>
+                                <Button variant='primary' disabled={ spice.ename.length < 3 } onClick={ handleClick }>Update Spice</Button>
                             </div>
                         </div>
                     </div>
