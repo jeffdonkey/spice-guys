@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import NoteItem from './NoteItem';
-import NoteContext from '../context/NoteContext';
+import NoteContext from '../context/SpiceContext';
 import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';

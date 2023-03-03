@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import NoteContext from '../context/NoteContext';
+import NoteContext from '../context/SpiceContext';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';

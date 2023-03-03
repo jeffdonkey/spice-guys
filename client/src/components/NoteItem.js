@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import NoteContext from '../context/NoteContext';
+import NoteContext from '../context/SpiceContext';
 import Accordion from "react-bootstrap/Accordion";
 
 
