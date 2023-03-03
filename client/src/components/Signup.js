@@ -8,7 +8,7 @@ const Signup = (props) => {
 
     // Set state of input text of form
     const [credentials, setCredentials] = useState({
-        name: '',
+        username: '',
         email: '',
         password: '',
         cpassword: '',
@@ -26,14 +26,14 @@ const Signup = (props) => {
         if(credentials.password !== credentials.cpassword) {
             setConfirmPwd('Password does not match');
         } else {
-            const { name, email, password } = credentials;
+            const { username, email, password } = credentials;
             const response = await fetch(`${process.env.REACT_APP_SERVER_URL}api/auth/createuser`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    name,
+                    username,
                     email,
                     password
                 })
@@ -42,7 +42,7 @@ const Signup = (props) => {
             const json = await response.json();
             if(json.success) {
                 localStorage.setItem('authToken', json.authToken);
-                navigate('/');
+                navigate('/home');
                 props.showAlert('Account created successfully!', 'success');
             } else {
                 props.showAlert('Invalid details', 'danger');
@@ -64,7 +64,7 @@ const Signup = (props) => {
             <Form onSubmit={ handleSubmit }>
                 <Form.Group className='mb-3'>
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type='text' id='name' name='name' onChange={ onChange } aria-describedby='emailHelp' minLength={ 3 } required />
+                    <Form.Control type='text' id='username' name='username' onChange={ onChange } aria-describedby='emailHelp' minLength={ 3 } required />
                 </Form.Group>
                 <Form.Group className='mb-3'>
                     <Form.Label>Email address</Form.Label>

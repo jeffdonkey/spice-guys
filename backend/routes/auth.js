@@ -21,7 +21,7 @@ const User = require("../models/User");
 // require("dotenv").config();
 
 // Route 1: Create a user using POST '/api/auth/register'
-router.post("/register",
+router.post("/createuser",
   [
     body("username", "Enter a valid username").isLength({ min: 3 }),
     body("email", "Enter a valid email address").isEmail(),
@@ -55,7 +55,7 @@ router.post("/register",
 
       // Create user which returns complete user object as a json file and saves to NongoDB:
       user = await User.create({
-        username: req.body.name,
+        username: req.body.username,
         email: req.body.email,
         password: secPass,
       });
