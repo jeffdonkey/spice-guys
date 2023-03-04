@@ -1,6 +1,6 @@
 import React from 'react';
-import AddNote from './AddSpice';
-import Notes from './Spice';
+import AddSpice from './AddSpice';
+import Spices from './Spice';
 
 const Home = (props) => {
     const { showAlert } = props;
@@ -8,9 +8,9 @@ const Home = (props) => {
     return (
         <div>
             <div className='container' style={{ width: '80%' }}>
-                <Notes showAlert={ showAlert }/>
+                <Spices showAlert={ showAlert }/>
             </div>
-            <AddNote showAlert={ showAlert }/>
+            <AddSpice showAlert={ showAlert }/>
         </div>
     );
 };
