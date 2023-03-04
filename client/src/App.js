@@ -10,7 +10,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LandingPage from "./components/LandingPage";
-import ShowSpice from "./components/ShowSpice";
+
 
 function App() {
   // Set initial state for alert as null
@@ -38,8 +38,7 @@ function App() {
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route exact path="/home" element={<Home showAlert={showAlert} />} />
-              <Route exact path="/about" element={<About />} />
-              <Route exact path="/showspice" element={<ShowSpice />} />
+              <Route exact path="/about" element={<About />} />             
               <Route
                 exact
                 path="/login"
