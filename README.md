@@ -7,12 +7,6 @@
         <img src="supportfiles/sglogo.png" alt="logo" />
     </a>
     <h3 align="center">Spice Guys</h3>
-    <!-- <p align=center>
-             |\      _,,,---,,_</br>
-        ZZZzz /,`.-'`'    -.  ;-;;,_</br>
-            |,4-  ) )-,_. ,\ (  `'-'</br>
-            '---''(_/--'  `-'\_)   
-    </p> -->
 </div>
 
 
@@ -23,7 +17,6 @@
         <li>
             <a href="#about-the-project">About the Project</a>
             <ul>
-                <li><a href="#project-requirements">Project Requirements</a></li>
                 <li><a href="#built-with">Built With</a></li>
             </ul>
         </li>
@@ -41,37 +34,27 @@
                 <li><a href="#prerequisites">Prerequisites</a></li>
             </ul>
         </li>
-        <li><a href="#roadmap">Roadmap / Future Updates</a></li>
         <li><a href="#license">License</a></li>
-        <li><a href="#contact">Contact</a></li>
     </ol>
 </details>
 
 
 <!-- ABOUT THE PROJECT -->
 ## About the Project
-This project is a web application that allows users to create and share spices for recipes. Users can create an account and login to the application. Once logged in, users can create, edit, and delete recipes. Users can also view recipes created by other users. Users can also search for recipes by name, ingredients, or tags. Users can also add recipes to their favorites list. Users can also add recipes to their shopping list. Users can also add recipes to their meal plan. Users can also view their profile page, which displays their recipes, favorites, shopping list, and meal plan.**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Project Requirements
-The project must be a web application that uses a database to store data. The web application must be written in Javascript/React, Express, Node and Mongodb.
-</br>
-The web application must be deployed to the web. The web application must be responsive. The web application must be able to handle user authentication. The web application must be able to handle file uploads. The web application must be able to handle user input validation. The web application must be able to handle user input sanitization. The web application must be able to handle user input encryption. The web application must be able to handle user input decryption. The web application must be able to handle user input hashing. The web application must be able to handle user input salting. The web application must be able to handle user input throttling. The web application must be able to handle user input rate limiting. The web application must be able to handle user input filtering. The web application must be able to handle user input masking. The web application must be able to handle user input escaping. The web application must be able to handle user input normalization. The web application must be able to handle user input encoding.
+Spice Guys is a web application that allows users to create and share information on spices. Users will create an account and login to the application. Once logged in, users can create, edit, and delete spices. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-STG Note-Taker is a full-stack MERN app built with the following frameworks/libraries:
+Spice Guys is a full-stack MERN app built with the following frameworks/libraries:
 * [![React.js](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
 * [![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)](https://expressjs.com/)
 * [![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 * [![MongoDB](https://custom-icon-badges.demolab.com/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
-* Nodemailer
+* [![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
 * Bcrypt
-* JWT
-* Axios - for making requests to backend
+* JSON Web Token (JWT)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -79,34 +62,32 @@ STG Note-Taker is a full-stack MERN app built with the following frameworks/libr
 <!-- APP ENDPOINTS -->
 ## Application Endpoints
 
-### Server API (http://localhost:5000)
+### Server API
 | Method | Path                                    | Purpose                           |
 | ------ | --------------------------------------- | --------------------------------- |
-| GET    | /api                                    | Home page                         |
+| GET    | /api                                    | Root Page                         |
 | GET    | /api/auth                               | User route                        |
-| POST   | /api/auth/register                      | For new user sign-up              |
+| POST   | /api/auth/createuser                    | For new user sign-up              |
 | POST   | /api/auth/login                         | For user login                    |
-| POST   | /api/auth/forgotpassword                | For user with forgotten password  |
-| POST   | /api/auth/resetpassword/:resetToken     | For user to reset password        |
-| GET    | /api/spices                             | Spices route                      |
-|        |                                         |                                   |
-|        |                                         |                                   |
-|        |                                         |                                   |
-|        |                                         |                                   |
+| GET    | /api/fetchallspices                     | Spices route                      |
+| POST   | /api/spices/addspice                    | Add Spice route                   |
+| DELETE | /api/spices/deletespice/:id             | Delete spice route                |
+| PUT    | /api/spices/updatespice/:id             | Update spice route                |
 
 
-### React App (http://localhost:3000)
-| Component                | Purpose                                                               |
-| ------------------------ | ----------------------------------------------------------------------|
-| `components/About.js`    | Component directing to About page (/about)                            |
-| `components/AddNote.js`  | Component on Home page that consists of form for adding notes         |
-| `components/Alert.js`    | Component that creates an alert for the NoteState (in context folder) |
-| `components/Home.js`     | Home page (/) - contains Notes and AddNote components                 |
-| `components/Login.js`    | Component directing to Login page (/login)                            |
-| `components/Navbar.js`   | Navigation bar at top of Home (/), /login, /signup, and /about pages  |
-| `components/NoteItem.js` | Component representing individual note that make up Notes component   |
-| `components/Notes.js`    | Component on Home page that includes individual note item components  |
-| `components/Signup.js`   | Component directing to Signup page (/signup)                          |
+### React App
+| Component                   | Purpose                                                                        | 
+| ------------------------    | -------------------------------------------------------------------------------|
+| `components/About.js`       | Component directing to About page (/about)                                     |
+| `components/AddSpice.js`    | Component on Home page that consists of form for adding notes                  |
+| `components/Alert.js`       | Component that creates an alert for the SpiceState (in context folder)         |
+| `components/LandingPage.js` | Landing Page (/) - can access Login or Signup                                  |
+| `components/Home.js`        | Home page (/home) - displays Spices and AddSpice components, can access Logout |
+| `components/Login.js`       | Component directing to Login page (/login)                                     |
+| `components/Navbar.js`      | Navigation bar - can access Login, Signup, Home and About                      |
+| `components/SpiceItem.js`   | Component representing individual spice that make up Spice.js component        | 
+| `components/Spice.js`       | Component on Home page that includes individual SpiceItem.js components        |
+| `components/Signup.js`      | Component directing to Signup page (/signup)                                   |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,24 +96,19 @@ STG Note-Taker is a full-stack MERN app built with the following frameworks/libr
 ## Getting Started
 
 ### Installation
-1. Once you've pulled the code into your local machine and are in the main branch, make sure you're in the root folder and run `npm install` to install dependencies.
-2. Open another terminal and `cd` into the `client` folder and run `npm install` to install all the React dependencies.
-3. Create a file in the root directory called `config.env`. You'll need to add the following environmental variables:
+1. In order to run this project locally, you'll need to cd into the both the `backend` and `client` folders and run `npm install`.
+2. Create an `.env` file in the `backend` directory and  add the following environmental variables:
     ```sh
         PORT=5000
         MONGO_URI=mongodb+srv://<username>:<password>@<clustername>.mongodb.net/spiceGuys
-
         JWT_SECRET=<random-string>
-        JWT_EXPIRE=10min
-
-        EMAIL_SERVICE=SendGrid
-        EMAIL_USERNAME=apikey
-        EMAIL_PASSWORD=<random-string>
-        EMAIL_FROM=<your-email>
     ```
-4. In order to run the app you'll also need to create a database in MongoDB, generate a JSON web token (JWT), and set up an account on SendGrid. The Prerequisites section below provides further instructions on these.
-5. In `package.json` in the `client` folder, make sure the port number in the proxy field matches the `PORT` in your `config.env` file and adjust if needed. The code you pull in locally, `"proxy": "http://127.0.0.1:5000"`, has the port set at 5000.
-
+3. Create an `.env` file in the `client` directory and add the following environmental variable:
+```sh
+    PORT=5000
+```
+    Note that if you change the port to anything other than 5000 in one .env you'll need to update it in the other as well.
+4. In order to run the app you'll also need to create a database in MongoDB and generate a JSON web token (JWT). The Prerequisites section below provides further instructions on these.
 
 ### Prerequisites
 * Set up a database on MongoDB:
@@ -141,32 +117,15 @@ STG Note-Taker is a full-stack MERN app built with the following frameworks/libr
     - A window will open where you'll fill in fields for "Database Name" and "Collection Name" and then click "Create Database". I named my database "spiceGuys" and the collection "users". I also added a collection named "spices", but that can be done later.
     - Get your connection string by clicking on the three dots next to your cluster name, which will enable a pop-up in which you'll click on "Copy connection string".
         ![MongoDB Connection String](supportfiles/MongoDB-Connection-String.png?raw=true)
-    - Copy the string and paste it after `MONGO_URI=` in the `config.env` file. Note that you may need to change the database name at the end of the string. Mine always comes up as "mongodb+srv://tysonlannon:<password>@cluster6977.oyy7lkw.mongodb.net/stgnotes" so I have to replace "stgnotes" with "spiceGuys".
-    - If you have trouble getting logged into Compass you can find instructions at the MongoDB Atlas website that will guide you through connecting to Compass at https://www.mongodb.com/atlas/database. Note that you'll need to log in here as well so you may need to reset your password like I did. It's not the same as the password in the string above.
-    - If you still have issues connecting we can troubleshoot it on Gather.
+    - Copy the string and paste it after `MONGO_URI=` in backend directory's `.env` file.
+    - If you have trouble getting logged into Compass you can find instructions at the MongoDB Atlas website that will guide you through connecting to Compass at https://www.mongodb.com/atlas/database.
 
-* Get a JSON web token (JWT) for authentication (note that this is covered in the video at https://www.youtube.com/watch?v=YocRq-KesCM):
+* Get a JSON web token (JWT) for authentication:
     - Go to the terminal and type `node` to launch the REPL (Node shell).
         ![Node-REPL](supportfiles/node-REPL.png?raw=true)
     - At the `>` prompt type `require('crypto').randomBytes(35).toString('hex')`.
-    - Copy the generated string and paste it after `JWT_SECRET=` in the `config.env` file.
+    - Copy the generated string and paste it after `JWT_SECRET=` in the `backend` directory's `.env` file.
     - Type `.exit` to exit the REPL and return to the terminal.
-
-* Set up an account on SendGrid for handling password resets:
-    - The video at https://www.youtube.com/watch?v=YocRq-KesCM (timestamp 01:33:13) covers how to generate your `EMAIL_PASSWORD` using `apikey` as the `EMAIL_USERNAME`, but you'll need to register for SendGrid first. You can do this at https://signup.sendgrid.com/.
-    - The sign-up form requires a company name and website, so I used "ThriveDX" and "https://thrivedx.com/".
-    - If you get hung up on this we can troubleshoot on Gather. If you want to skip this setup that should be fine but Jeff should probably get set up since it he'll be the one to deploying.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- ROADMAP / FUTURE UPDATES -->
-## Roadmap / Future Updates
-
-- [ ] BlahBlahBlah
-- [ ] BlahBlahBlah
-- [ ] BlahBlahBlah
-- [ ] BlahBlahBlah
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -175,18 +134,5 @@ STG Note-Taker is a full-stack MERN app built with the following frameworks/libr
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- CONTACT -->
-## Contact
-
-| Name          | Email                     | Phone Number     |
-| ------------- | --------------------------| -----------------|
-| Jeff Spice    | 8jefa8@gmail.com          | (479).422.2529   |
-| Shane Spice   | shanespillman@gmail.com   | (336).624.8595   |
-| Gang Spice    | gangzi923@gmail.com       | (910).547.2365   |
-| Sassy Spice   | tysonlannon@gmail.com     | (919).345.3057   |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
