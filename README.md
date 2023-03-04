@@ -103,9 +103,9 @@ Spice Guys is a full-stack MERN app built with the following frameworks/librarie
         MONGO_URI=mongodb+srv://<username>:<password>@<clustername>.mongodb.net/spiceGuys
         JWT_SECRET=<random-string>
     ```
-3. Create an `.env` file in the `client` directory and add the following environmental variable:
+3. Create an `.env` file in the `client` directory and add the following environmental variable. (Note that if you change the port to anything other than 5000 in one .env you'll need to update it in the other as well.)
 ```sh
-    PORT=5000
+    REACT_APP_SERVER_URL=http://localhost:5000/
 ```
     Note that if you change the port to anything other than 5000 in one .env you'll need to update it in the other as well.
 4. In order to run the app you'll also need to create a database in MongoDB and generate a JSON web token (JWT). The Prerequisites section below provides further instructions on these.
